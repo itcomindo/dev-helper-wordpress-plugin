@@ -50,9 +50,10 @@
     font-size: 11px !important;
     line-height: 1;
     padding: 8px 16px;
-    background-color: rgba(255,255,255,0.3);
+    background: linear-gradient(to bottom, #333, #000);
     border: 1px solid rgba(255,255,255,0.1);
     cursor: pointer;
+    color: white;
 }
 
 #toggleOpenDH.active {
@@ -62,7 +63,8 @@
     font-size: 11px !important;
     line-height: 1;
     padding: 8px 16px;
-    background-color: rgba(255,255,255,0.3);
+    background: linear-gradient(to bottom, #333, #000);
+    color: white;
     border: 1px solid rgba(255,255,255,0.1);
     cursor: pointer;
 }
@@ -70,8 +72,45 @@
 .devHelpWr {
     width: 100%;
     padding: 4px;
-    background-color: darkred;
 }
+.devHelpWr.dhSingle {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    background: linear-gradient(to bottom, #333, #000);
+    box-shadow: 0 0 10px rgba(255,255,255,.5) inset;
+}
+
+.devHelpWr.dhSingle .devTriggerWr {
+    flex: 1;
+}
+.shortCutWr {
+    width: 40px;
+    padding: 0 2px;
+}
+.shortCutWr a {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 10px;
+    text-align: center;
+    line-height: 1;
+    margin: 0;
+    padding: 4px 2px;
+    background: linear-gradient(to bottom, #333, #000);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    box-shadow: 0 0 3px rgba(255,255,255,.3) inset;
+    margin-bottom: 6px;
+}
+.shortCutWr a i {
+    margin-bottom: 4px;
+}
+
 .devTriggerWr {
     width: 100%;
     display: flex;
@@ -95,7 +134,7 @@
     align-items: flex-start;
     text-align: left;
 }
-.devShortcuts {
+.devShortcuts.active {
     padding: 0 2px;
     width: 100%;
     display: flex;
@@ -103,6 +142,9 @@
     align-items: flex-start;
     background-color: black;
     margin-bottom: 4px;
+}
+.devShortcuts.inactive {
+    height: 0px;
 }
 .devShortcuts ul {
     width: 100%;
