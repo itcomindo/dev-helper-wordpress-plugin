@@ -40,12 +40,28 @@ function dev_helper_workspace()
         $users = $wpadmin . '/users.php';
         $newuser = $wpadmin . '/user-new.php';
         $profile = $wpadmin . '/profile.php';
-        $tools = $wpadmin . '/tools.php';
-        $import = $wpadmin . '/import.php';
-        $export = $wpadmin . '/export.php';
-        $sitehealth = $wpadmin . '/site-health.php';
-        $sitehealthInfo = $wpadmin . '/site-health.php?tab=info';
         $checkupdates = $wpadmin . '/update-core.php';
+        $chatgpt = 'https://chat.openai.com/chat';
+        $wpreferences = 'https://developer.wordpress.org/reference/';
+        $wpcodey = 'https://wpcodey.com/';
+        $wpskills = 'https://wp-skills.com/';
+        $codewpai = 'https://codewp.ai/app/create/';
+        $stackexchange = 'https://wordpress.stackexchange.com/';
+        $jquery = 'https://api.jquery.com/';
+        $w3css = 'https://www.w3schools.com/w3css/';
+        $w3js = 'https://www.w3schools.com/js/';
+        $w3php = 'https://www.w3schools.com/php/';
+        $w3html = 'https://www.w3schools.com/html/';
+        $w3sql = 'https://www.w3schools.com/sql/';
+        $w3jquery = 'https://www.w3schools.com/jquery/';
+        $w3cssref = 'https://www.w3schools.com/cssref/';
+        $w3jsref = 'https://www.w3schools.com/jsref/';
+        $w3phpref = 'https://www.w3schools.com/php/php_ref_array.asp';
+        $w3htmlref = 'https://www.w3schools.com/tags/default.asp';
+        $w3sqlref = 'https://www.w3schools.com/sql/sql_ref_mysql.asp';
+        $w3jqueryref = 'https://www.w3schools.com/jquery/jquery_ref_selectors.asp';
+        $w3wordpressref = 'https://www.w3schools.com/wordpress/wp_ref_get_posts.asp';
+        
         //create logout button when click logout then redirect to home page
         $logout = wp_logout_url(home_url());
         if (is_single() || is_page()) {
@@ -68,7 +84,13 @@ function dev_helper_workspace()
                     <div id="devwpadmin" class="devShortcuts inactive">
                         <ul>
                             <li><a target="_blank" href="<?php echo $wpadmin . '/'; ?>">Wp Admin</a></li>
-                            <li><a target="_blank" href="<?php echo $logout; ?>">Logout</a></li>
+                            <li><a target="_blank" href="<?php echo $checkupdates; ?>">Check Update</a></li>
+                            <li><a target="_blank" href="<?php echo $profile; ?>">Profile</a></li>
+                            <li><a target="_blank" href="<?php echo $users; ?>">Users</a></li>
+                            <li><a target="_blank" href="<?php echo $newuser; ?>">New User</a></li>
+                            <li><a target="_blank" href="<?php echo $comments; ?>">Comments</a></li>
+                            <li><a target="_blank" href="<?php echo $widgets; ?>">Widget</a></li>
+                            <li><a class="dhLogout" target="_blank" href="<?php echo $logout; ?>">Logout</a></li>
                         </ul>
                     </div>
                     <div data-toggle="devcontent" class="devTrigger">Content</div>
@@ -110,13 +132,34 @@ function dev_helper_workspace()
                             <li><a target="_blank" href="<?php echo $uploadmedia; ?>">Upload New Media</a></li>
                         </ul>
                     </div>
+                    <div data-toggle="helperReferences" class="devTrigger">Helper</div>
+                    <div id="helperReferences" class="devShortcuts inactive">
+                        <ul class="dhTwoCol">
+                            <li><a target="_blank" href="<?php echo $chatgpt; ?>">Chat GPT</a></li>
+                            <li><a target="_blank" href="<?php echo $wpreferences; ?>">Wordpress Reference</a></li>
+                            <li><a target="_blank" href="<?php echo $wpcodey; ?>">WpCodey</a></li>
+                            <li><a target="_blank" href="<?php echo $wpskills; ?>">WPSkills</a></li>
+                            <li><a target="_blank" href="<?php echo $codewpai; ?>">CodeWpAi</a></li>
+                            <li><a target="_blank" href="<?php echo $stackexchange; ?>">Stackexchange</a></li>
+                            <li><a target="_blank" href="<?php echo $jquery; ?>">Jquery</a></li>
+                            <!-- w3css -->
+                            <li><a target="_blank" href="<?php echo $w3css; ?>">W3 CSS</a></li>
+                            <li><a target="_blank" href="<?php echo $w3js; ?>">W3 JS</a></li>
+                            <li><a target="_blank" href="<?php echo $w3jquery; ?>">W3 Jquery</a></li>
+                            <li><a target="_blank" href="<?php echo $w3html; ?>">W3 HTML</a></li>
+                            <li><a target="_blank" href="<?php echo $w3php; ?>">W3 PHP</a></li>
+                            <li><a target="_blank" href="<?php echo $w3sql; ?>">W3 SQL</a></li>
+                            <li><a target="_blank" href="<?php echo $w3cssref; ?>">W3 CSS Ref</a></li>
+                            <li><a target="_blank" href="<?php echo $w3jsref; ?>">W3 Js Ref</a></li>
+                            <li><a target="_blank" href="<?php echo $w3jqueryref; ?>">W3 Jquery Ref</a></li>
+                            <li><a target="_blank" href="<?php echo $w3sqlref; ?>">W3 SQL Ref</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <!-- trigger end -->
                 <!-- shortcut start -->
                 <?php
                 if (is_single() || is_page()) {
-                    // $editpost = get_edit_post_link();
-                    // $editpost = '<a target="_blank" href="' . $editpost . '"><i class="fas fa-pencil-alt"></i>Edit Post</a>';
                 ?>
                     <div class="shortCutWr">
                         <!-- for post start -->

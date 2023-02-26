@@ -164,3 +164,18 @@
     text-align: left;
     border-bottom: 1px dashed white;
 }
+
+.dhTwoCol {
+    column-count: 2;
+    display: unset !important;
+}
+
+ul.dhTwoCol li {
+    font-size: 12px;
+}
+
+a.dhLogout {
+    background-color: darkred;
+    padding: 5px 16px;
+    width: max-content;
+}
