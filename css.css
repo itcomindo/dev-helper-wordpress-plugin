@@ -146,36 +146,92 @@
 .devShortcuts.inactive {
     height: 0px;
 }
-.devShortcuts ul {
+/* .devShortcuts ul {
     width: 100%;
     display: flex;
     flex-direction: column;
     padding: 2px;
     list-style: none;
+} */
+
+.devShortcuts ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2px;
+    list-style: none;
 }
-.devShortcuts ul li {
+/* .devShortcuts ul li {
     width: 100%;
     font-size: 13px;
     margin: 0 0 4px 0;
     background-color: black;
-    padding: 4px 0;
+    padding: 4px;
     display: flex;
     flex-direction: column;
     text-align: left;
-    border-bottom: 1px dashed white;
+    border-bottom: 1px dashed rgba(255,255,255,0.2);
+} */
+
+.devShortcuts ul li {
+    width: calc(100% / 3 - 8px);
+    font-size: 11px;
+    margin: 4px;
+    background-color: black;
+    padding: 12px 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1;
+    border: 1px solid rgba(255,255,255,0.2);
+    /* border-bottom: 1px dashed rgba(255,255,255,0.2); */
 }
 
-.dhTwoCol {
+/* .dhTwoCol {
     column-count: 2;
     display: unset !important;
+} */
+
+.dhTwoCol {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    align-items: stretch;
+    justify-content: space-between;
 }
 
-ul.dhTwoCol li {
-    font-size: 12px;
+
+.dhTwoCol li {
+    height: 100%;
+}
+.dhTwoCol li  a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 a.dhLogout {
     background-color: darkred;
     padding: 5px 16px;
     width: max-content;
+}
+
+.devTrigger.test {
+    background: darkgreen;
+}
+.devShortcuts.active ul li {
+    background-color: #212121;
+}
+
+.devShortcuts.active ul li:hover {
+    background-color: #333;
 }
